@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.1.96",
+    "@popperjs/core": "^2.11.7",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "vue": "^3.2.47",
+    "vue-router": "^4.0.14",
+    "vuetify": "^3.3.0",
+    "webfontloader": "^1.6.28"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vuetify/vite-plugin": "^1.0.0-alpha.11",
+    "vite": "^4.3.2",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vuetify-loader": "^1.9.2"
+  }
+}
