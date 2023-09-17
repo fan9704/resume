@@ -5,14 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:linux": "vite build && mv dist dist_netlify/resume",
+    "build:windows": "vite build && move dist dist_netlify/resume",
+    "deploy": "node ./deploy/ghpages.js"
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
     "@popperjs/core": "^2.11.7",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
+    "gh-pages": "^6.0.0",
+    "sass": "^1.66.1",
+    "scss": "^0.2.4",
     "vue": "^3.2.47",
     "vue-router": "^4.0.14",
     "vuetify": "^3.3.0",
@@ -21,6 +27,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
     "@vuetify/vite-plugin": "^1.0.0-alpha.11",
+    "unplugin-vue-components": "^0.24.1",
     "vite": "^4.3.2",
     "vite-plugin-vuetify": "^1.0.2",
     "vuetify-loader": "^1.9.2"

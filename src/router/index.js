@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IndexView from "../views/IndexView.vue";
+import IndexLayout  from "../views/IndexLayout.vue";
 
 const routes = [
     {
         path: '/',
-        name: 'IndexView',
-        component: IndexView
+        name: 'IndexLayout',
+        component: IndexLayout
     }
 ]
 
 const router = createRouter({
-    history: createWebHistory('/resume'),
+    history: createWebHistory(),
     routes
 })
 
