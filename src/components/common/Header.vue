@@ -1,64 +1,53 @@
 <template>
-  <header class="l-header">
-    <nav class="nav bd-grid" v-show="navShow">
-      <div>
-        <a href="#" class="nav__logo">FKT</a>
-      </div>
-
-      <div class="nav__menu" id="nav-menu">
+  <header class="l-header" >
+    <nav class="nav bd-grid">
+      <div><a href="#" class="nav__logo">FKT</a></div>
+      <div class="nav__menu"  id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-          <button class="nav__item" v-on:click="toggleTheme">Toggle Theme</button>
+          <li class="nav__item" ><a href="#contact" class="nav__link">Contact</a></li>
+          <li type="checkbox" class="nav__item" v-on:click="toggleDark()">Click Me!</li>
         </ul>
       </div>
 
-      <div class="nav__toggle" id="nav-toggle" v-on:click="showMenu">
-        <i class='bx bx-menu'></i>
-      </div>
     </nav>
   </header>
 </template>
 <script>
-import { computed } from 'vue';
-import { theme } from '../../utils/theme.js';
+import {useDark,useToggle} from "@vueuse/core";
+
 export default {
   name:"Header",
+  inject: ['dark'],
   data(){
     return{
       navShow:true,
     }
   },
-  computed: {
-    themeClass() {
-      return theme.darkMode ? 'dark-mode' : 'light-mode';
-    },
-  },
-  methods:{
-    showMenu(){
-          this.navShow = !this.navShow;
-    },
-    toggleTheme() {
-      theme.darkMode = !theme.darkMode;
-    },
+  setup(){
+    const isDark = useDark({
+      selector: 'body',
+      attribute: 'color-scheme',
+      valueDark: 'dark',
+      valueLight: 'light',
+      onChanged(dark) {
+        // update the dom, call the API or something
+      },
+    })
+    localStorage.setItem('vueuse-color-scheme', 'dark')
+    const toggleDark = useToggle(isDark)
+    return {
+      toggleDark,
+      isDark
+    };
   },
 }
 
 </script>
 <style lang="scss">
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-.light-mode {
-  background-color: white;
-  color: black;
-}
-
 .l-header {
   width: 100%;
   position: fixed;
@@ -69,7 +58,6 @@ export default {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/* NAV */
 .nav {
   height: var(--header-height);
   display: flex;
@@ -78,29 +66,28 @@ export default {
   font-weight: var(--font-semi);
 
   &__menu {
-    @media screen and (max-width: 767px) {
-      position: fixed;
-      top: var(--header-height);
-      right: -100%;
-      width: 80%;
-      height: 100%;
-      padding: 2rem;
-      background-color: var(--second-color);
-      transition: 0.5s;
+    padding: 0;
+    margin: 0;
+    ul.nav__list {
+      display: flex;
+      li.nav__item {
+        a.nav__link {
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #ff9900;
+          }
+        }
+      }
     }
   }
-
-  &__item {
-    margin-bottom: var(--mb-4);
+  ul{
+    margin-bottom: 0px;
   }
-
   &__link {
-    position: relative;
-    color: #000000;
-
     &:hover {
       position: relative;
-
       &::after {
         position: absolute;
         content: '';
@@ -112,26 +99,5 @@ export default {
       }
     }
   }
-
-  &__logo {
-    color: var(--second-color);
-  }
-
-  &__toggle {
-    color: var(--second-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
 }
-/* Active menu */
-.active::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-
 </style>

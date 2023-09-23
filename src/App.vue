@@ -1,30 +1,33 @@
 <template>
-  <Header></Header>
-  <router-view></router-view>
-  <Footer></Footer>
+  <Header :class="{ dark: isDark }"></Header >
+  <router-view :class="{ dark: isDark }"></router-view>
+  <Footer :class="{ dark: isDark }"></Footer>
 </template>
+<script setup>
+import { useDark, useToggle } from "@vueuse/core";
 
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+localStorage.setItem('vueuse-color-scheme', 'dark')
+</script>
 <script>
-import Header from "./components/common/Header.vue";
+import Header from "@/components/common/Header.vue";
 import Footer from "@/components/common/Footer.vue";
 
 export default {
   name: 'App',
   components:[Header,Footer],
-  data: () => ({
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-linkedin',
-      'mdi-instagram',
-    ],
-  }),
 }
 </script>
 
 <style>
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.dark {
+  background: #16171d;
+  color: #fff;
+}
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -36,7 +39,7 @@ export default {
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: Poppins sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -50,7 +53,6 @@ export default {
   --z-back: -10;
   --z-fixed: 100;
 }
-
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;

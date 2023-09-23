@@ -15,14 +15,8 @@ import 'aos/dist/aos.css';
 //Bootstrap
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
-const myCustomLightTheme = {
-    dark: true,
-    colors: {
-        primary: '#33627f',
-        secondary: '#34997e',
-        black: '#0f172a',
-    },
-};
+import {useDark} from "@vueuse/core";
+
 const app = createApp(App);
 const vuetify = createVuetify({
     components,
@@ -30,12 +24,20 @@ const vuetify = createVuetify({
     theme: {
         // defaultTheme: 'myCustomLightTheme',
         themes: {
-            // myCustomLightTheme,
             dark:false,
         },
     },
 });
-
+const isDark = useDark({
+    selector: 'body',
+    attribute: 'color-scheme',
+    valueDark: 'dark',
+    valueLight: 'light',
+    onChanged(dark) {
+        // update the dom, call the API or something
+    },
+})
+app.provide('dark', isDark);
 app.use(vuetify)
 app.use(router)
 app.use(loadFonts);

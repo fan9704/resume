@@ -1,5 +1,4 @@
 <template>
-  <!--===== ABOUT =====-->
   <section class="about section " id="about">
     <h2 class="section-title">About</h2>
 
@@ -10,7 +9,7 @@
 
       <div>
         <h2 class="about__subtitle">I'am FKT</h2>
-        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>
+        <p class="about__text">National Yunlin University of Science and Technology Information Management Student. Major in Backend/Project Management.Currently prepare for master degree application</p>
       </div>
     </div>
   </section>
@@ -21,7 +20,6 @@ export default {
 }
 </script>
 <style scoped>
-/* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
   text-align: center;

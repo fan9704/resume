@@ -1,5 +1,4 @@
 <template>
-  <!--===== HOME =====-->
   <section class="home bd-grid" id="home">
     <div class="home__data">
       <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">FKT</span><br> Backend Engineer</h1>
@@ -8,9 +7,9 @@
     </div>
 
     <div class="home__social">
-      <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-      <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-      <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+      <a href="https://www.linkedin.com/in/gang-ting-fan-95885920a/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      <a href="mailto:gangtingfan0207@gmail.com" class="home__social-icon" target="_blank"><i class='bx bxs-envelope' ></i></a>
+      <a href="https://github.com/fan9704/" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
     </div>
 
     <div class="home__img">
@@ -32,8 +31,6 @@ export default {
 }
 </script>
 <style scoped>
-
-/*===== HOME =====*/
 .home {
   position: relative;
   row-gap: 5rem;
@@ -61,11 +58,11 @@ export default {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 .home__social-icon:hover {
-  color: var(--first-color);
+  color: #ff9900;
 }
 
 .home__img {
@@ -80,5 +77,13 @@ export default {
 
 .home__blob-img {
   width: 360px;
+}
+
+.home a.button{
+  color:white;
+  text-decoration: none;
+}
+a.button:hover{
+  background-color: #ff9900;
 }
 </style>

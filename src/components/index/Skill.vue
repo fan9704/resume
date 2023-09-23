@@ -1,16 +1,15 @@
 <template>
-  <!--===== SKILLS =====-->
   <section class="skills section" id="skills">
     <h2 class="section-title">Skills</h2>
 
     <div class="skills__container bd-grid">
       <div>
-        <h2 class="skills__subtitle">Profesional Skills</h2>
-        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+        <h2 class="skills__subtitle">Professional Skills</h2>
+        <p class="skills__text">Base on Backend Skill I extended lots of other fun skills.</p>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxl-html5 skills__icon'></i>
-            <span class="skills__name">HTML5</span>
+            <i class='bx bxl-django skills__icon'></i>
+            <span class="skills__name">Django</span>
           </div>
           <div class="skills__bar skills__html">
 
@@ -21,8 +20,8 @@
         </div>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxl-css3 skills__icon'></i>
-            <span class="skills__name">CSS3</span>
+            <i class='bx bxl-spring-boot skills__icon'></i>
+            <span class="skills__name">Spring Boot</span>
           </div>
           <div class="skills__bar skills__css">
 
@@ -33,8 +32,8 @@
         </div>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxl-javascript skills__icon' ></i>
-            <span class="skills__name">JAVASCRIPT</span>
+            <i class='bx bxl-typescript skills__icon' ></i>
+            <span class="skills__name">TypeScript</span>
           </div>
           <div class="skills__bar skills__js">
 
@@ -45,8 +44,8 @@
         </div>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxs-paint skills__icon'></i>
-            <span class="skills__name">UX/UI</span>
+            <i class='bx bxl-firebase skills__icon'></i>
+            <span class="skills__name">Firebase</span>
           </div>
           <div class="skills__bar skills__ux">
 
@@ -65,11 +64,10 @@
 </template>
 <script>
 export default {
-  name:"Skill"
+  name:"Skill",
 }
 </script>
 <style scoped>
-/* ===== SKILLS =====*/
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -113,7 +111,7 @@ export default {
   background-color: var(--first-color);
   height: .25rem;
   border-radius: .5rem;
-  z-index: var(--z-back);
+  z-index: 10;
 }
 
 .skills__html {
