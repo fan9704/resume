@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from "./router";
 import { loadFonts } from './plugins/webfontloader';
 import '@mdi/font/css/materialdesignicons.css';
+import i18n from "./plugins/i18n.js";
 // Vuetify
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
@@ -38,6 +39,7 @@ const isDark = useDark({
     },
 })
 app.provide('dark', isDark);
+app.use(i18n);
 app.use(vuetify)
 app.use(router)
 app.use(loadFonts);

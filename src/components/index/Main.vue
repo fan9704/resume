@@ -2,8 +2,8 @@
   <main class="l-main">
     <Home></Home>
     <About></About>
-    <Work></Work>
     <Skill></Skill>
+    <Work></Work>
     <Contact></Contact>
   </main>
 </template>

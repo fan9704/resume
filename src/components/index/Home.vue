@@ -1,9 +1,9 @@
 <template>
   <section class="home bd-grid" id="home">
     <div class="home__data">
-      <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">FKT</span><br> Backend Engineer</h1>
+      <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">FKT</span><br> Backend Engineer</h1>
 
-      <a href="#" class="button">Contact</a>
+      <a href="#contact" class="button">Contact</a>
     </div>
 
     <div class="home__social">

@@ -8,7 +8,7 @@
       </div>
 
       <div>
-        <h2 class="about__subtitle">I'am FKT</h2>
+        <h2 class="about__subtitle">I'm FKT</h2>
         <p class="about__text">National Yunlin University of Science and Technology Information Management Student. Major in Backend/Project Management.Currently prepare for master degree application</p>
       </div>
     </div>
