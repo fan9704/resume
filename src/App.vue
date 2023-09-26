@@ -8,7 +8,7 @@ import { useDark, useToggle } from "@vueuse/core";
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-localStorage.setItem('vueuse-color-scheme', 'dark')
+// localStorage.setItem('vueuse-color-scheme', 'dark')
 </script>
 <script>
 import Header from "@/components/common/Header.vue";

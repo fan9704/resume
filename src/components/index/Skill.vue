@@ -1,11 +1,11 @@
 <template>
   <section class="skills section" id="skills">
-    <h2 class="section-title">Skills</h2>
+    <h2 class="section-title">{{$t("skill.title")}}</h2>
 
     <div class="skills__container bd-grid">
       <div>
-        <h2 class="skills__subtitle">Professional Skills</h2>
-        <p class="skills__text">Base on Backend Skill I extended lots of other fun skills.</p>
+        <h2 class="skills__subtitle">{{$t("skill.subtitle")}}</h2>
+        <p class="skills__text">{{$t("skill.text")}}</p>
         <div class="skills__data">
           <div class="skills__names">
             <i class='bx bxl-django skills__icon'></i>

@@ -1,6 +1,6 @@
 <template>
   <section class="about section " id="about">
-    <h2 class="section-title">About</h2>
+    <h2 class="section-title">{{$t("about.title")}}</h2>
 
     <div class="about__container bd-grid">
       <div class="about__img">
@@ -8,8 +8,8 @@
       </div>
 
       <div>
-        <h2 class="about__subtitle">I'm FKT</h2>
-        <p class="about__text">National Yunlin University of Science and Technology Information Management Student. Major in Backend/Project Management.Currently prepare for master degree application</p>
+        <h2 class="about__subtitle">{{$t("about.subtitle")}}</h2>
+        <p class="about__text">{{$t("about.text")}}</p>
       </div>
     </div>
   </section>

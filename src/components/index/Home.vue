@@ -1,9 +1,9 @@
 <template>
   <section class="home bd-grid" id="home">
     <div class="home__data">
-      <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">FKT</span><br> Backend Engineer</h1>
+      <h1 class="home__title">{{$t("home.titleLine1")}}<br>{{$t("home.titleLine2")}} <span class="home__title-color">{{$t("home.titleLine3")}}</span><br> {{$t("home.titleLine4")}}</h1>
 
-      <a href="#contact" class="button">Contact</a>
+      <a href="#contact" class="button">{{$t("home.contactButton")}}</a>
     </div>
 
     <div class="home__social">

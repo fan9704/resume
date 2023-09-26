@@ -8,7 +8,7 @@
       <a href="https://www.instagram.com/cxz123499/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
       <a href="https://www.linkedin.com/in/gang-ting-fan-95885920a/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
     </div>
-    <p class="footer__copy">&#169; FKT. All rights reserved</p>
+    <p class="footer__copy">&#169; {{$t("footer.copyRight")}}</p>
   </footer>
 
 </template>

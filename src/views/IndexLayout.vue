@@ -3,7 +3,7 @@
 </template>
 <script>
 import Main from "@/components/index/Main.vue";
-import {inject, watch} from "vue";
+import {watch} from "vue";
 import {useDark} from "@vueuse/core";
 
 export default {

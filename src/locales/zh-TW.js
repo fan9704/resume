@@ -14,7 +14,7 @@ export default {
     "contact": {
         "title": "聯絡",
         "namePlaceholder": "姓名",
-        "emailPlaceHolder": "郵件",
+        "emailPlaceholder": "郵件",
         "submit": "提交"
     },
     "home": {
@@ -22,7 +22,7 @@ export default {
         "titleLine2": "我是",
         "titleLine3": "FKT",
         "titleLine4": "後端工程師",
-        "contactButton": "聯絡我們"
+        "contactButton": "聯絡我"
     },
     "skill": {
         "title": "技能",
@@ -34,7 +34,7 @@ export default {
         "title": "作品"
     },
     "footer": {
-        "title": "范綱廷，FKT",
+        "title": "范綱庭，FKT",
         "copyRight": "FKT。保留所有權利"
     }
 }

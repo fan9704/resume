@@ -1,10 +1,10 @@
 export default {
     header:{
-        home:"home",
-        about:"about",
-        skills:"skills",
-        work:"work",
-        contact:"contact",
+        home:"Home",
+        about:"About",
+        skills:"Skills",
+        work:"Work",
+        contact:"Contact",
     },
     about:{
         title:"About",
@@ -14,7 +14,7 @@ export default {
     contact:{
         title:"Contact",
         namePlaceholder:"Name",
-        emailPlaceHolder:"Email",
+        emailPlaceholder:"Email",
         submit:"Submit"
     },
     home:{

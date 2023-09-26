@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     Carousel: typeof import('./src/components/carousel.vue')['default']
     Contact: typeof import('./src/components/index/Contact.vue')['default']
     Footer: typeof import('./src/components/common/Footer.vue')['default']
+    Gallery: typeof import('./src/components/gallery/Gallery.vue')['default']
     Header: typeof import('./src/components/common/Header.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     Home: typeof import('./src/components/index/Home.vue')['default']
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Skill: typeof import('./src/components/index/Skill.vue')['default']
+    Thumbnail: typeof import('./src/components/gallery/Thumbnail.vue')['default']
     Work: typeof import('./src/components/index/Work.vue')['default']
   }
 }
