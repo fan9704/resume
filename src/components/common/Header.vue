@@ -9,13 +9,14 @@
           <li class="nav__item"><a href="#skills" class="nav__link">{{$t("header.skills")}}</a></li>
           <li class="nav__item"><a href="#work" class="nav__link">{{$t("header.work")}}</a></li>
           <li class="nav__item" ><a href="#contact" class="nav__link">{{$t("header.contact")}}</a></li>
-          <li class="nav__item" ><router-link to="/gallery/">Gallery</router-link></li>
-          <li class="nav__item" v-on:click="toggleDark()">Click Me!</li>
-          <select class="nav__item"  v-model="selected" @change="setLocale">
+          <li class="nav__item" ><router-link to="/gallery/" class="nav__link">Gallery</router-link></li>
+          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleDark()">Click Me!</a> </li>
+          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleLang()">中/En</a> </li>
+          <!-- <select class="nav__item"  v-model="selected" @change="setLocale">
             <option v-for="option in options" :value="option.value" :key="option.value">
               {{ option.text }}
             </option>
-          </select>
+          </select> -->
         </ul>
       </div>
 
@@ -46,9 +47,12 @@ export default {
       },
     })
     localStorage.setItem('vueuse-color-scheme', 'dark')
-
+    const isEn = ref(true);
     const toggleDark = useToggle(isDark)
-
+    const toggleLang = ()=>{
+      isEn.value = !isEn.value;
+      i18n.global.locale = isEn.value ? 'en' : 'zh';
+    }
     let lang = i18n.global.locale
     let selected = ref(lang)
     const options = ref([
@@ -62,6 +66,7 @@ export default {
     }
     return {
       toggleDark,
+      toggleLang,
       isDark,
       setLocale,
       selected,
