@@ -19,12 +19,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
+          cache: 'pnpm'
       - name: Install yarn packages
-        run: yarn install
+        run: pnpm install
 
       - name: Generate Pages
-        run: yarn build
+        run: pnpm build
 
 
       - name: Deploy to GitHub Pages
