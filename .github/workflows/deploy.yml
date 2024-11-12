@@ -15,12 +15,16 @@ jobs:
         with:
           timezoneLinux: "Asia/Taipei"
           timezoneMacos: "Asia/Taipei"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
 
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'pnpm'
-      - name: Install yarn packages
+      - name: Install pnpm packages
         run: pnpm install
 
       - name: Generate Pages
