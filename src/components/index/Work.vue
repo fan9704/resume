@@ -102,7 +102,8 @@ export default {
   object-fit: cover;
 }
 .work__img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  transition-duration: 0.5s;
 }
 a.work__img{
   position: relative;

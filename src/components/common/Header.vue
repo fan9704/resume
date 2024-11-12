@@ -4,14 +4,14 @@
       <div><router-link to="/" class="nav__logo">FKT</router-link></div>
       <div class="nav__menu"  id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">{{$t("header.home")}}</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">{{$t("header.about")}}</a></li>
-          <li class="nav__item"><a href="#skills" class="nav__link">{{$t("header.skills")}}</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">{{$t("header.work")}}</a></li>
-          <li class="nav__item" ><a href="#contact" class="nav__link">{{$t("header.contact")}}</a></li>
-          <li class="nav__item" ><router-link to="/gallery/" class="nav__link">Gallery</router-link></li>
-          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleDark()">Click Me!</a> </li>
-          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleLang()">中/En</a> </li>
+          <li class="nav__item"><a href="/#home" class="nav__link">{{$t("header.home")}}</a></li>
+          <li class="nav__item"><a href="/#about" class="nav__link">{{$t("header.about")}}</a></li>
+          <li class="nav__item"><a href="/#skills" class="nav__link">{{$t("header.skills")}}</a></li>
+          <li class="nav__item"><a href="/#work" class="nav__link">{{$t("header.work")}}</a></li>
+          <li class="nav__item" ><a href="/#contact" class="nav__link">{{$t("header.contact")}}</a></li>
+          <li class="nav__item" ><router-link to="/gallery/" class="nav__link">{{ $t("header.gallery") }}</router-link></li>
+          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleDark()">{{  $t("header.useDark") }}</a> </li>
+          <li class="nav__item" > <a href="#" class="nav__link" v-on:click="toggleLang()">{{ $t("header.lang") }}</a> </li>
           <!-- <select class="nav__item"  v-model="selected" @change="setLocale">
             <option v-for="option in options" :value="option.value" :key="option.value">
               {{ option.text }}

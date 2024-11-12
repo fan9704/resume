@@ -2,7 +2,7 @@
   <div class="con">
     <h1>Gallery</h1>
     <div class="wrapper" >
-      <img v-for="image in images" :src="image.url" alt="" class="image-cropper">
+      <img v-for="image in images" :src="image.url" alt="" loading="lazy" class="image-cropper">
     </div>
     <h1>Gallery</h1>
   </div>

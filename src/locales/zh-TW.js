@@ -4,10 +4,13 @@ export default {
         "about": "關於",
         "skills": "技能",
         "work": "作品",
-        "contact": "聯絡"
+        "contact": "聯絡",
+        "gallery": "圖庫",
+        "useDark": "淺/深色",
+        "lang": "中/英"
     },
     "about": {
-    "title": "關於",
+        "title": "關於",
         "subtitle": "我是FKT",
         "text": "國立台灣科技大學資訊管理學系碩士。以後端/專案管理為專長。目前準備完成學業且尋找工作中。"
     },
@@ -27,7 +30,7 @@ export default {
     "skill": {
         "title": "技能",
         "subtitle": "專業技能",
-        "text": "基於後端技術，我擴展了許多有趣的技能。",
+        "text": "基於後端技術，我還鑽研了許多有趣的技能。",
         //TODO: 技能名稱的i18n
     },
     "work": {

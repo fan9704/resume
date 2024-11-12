@@ -5,6 +5,9 @@ export default {
         skills:"Skills",
         work:"Work",
         contact:"Contact",
+        gallery:"Gallery",
+        useDark:"Light/Dark",
+        lang:"Zh-TW/EN",
     },
     about:{
         title:"About",
