@@ -12,7 +12,7 @@ export default {
     about:{
         title:"About",
         subtitle:"I'm FKT",
-        text:"National Taiwan University of Science and Technology Information Management Master Degree Student. Major in Backend/Project Management.Currently prepare for master degree and looking for job.",
+        text:"National Taiwan University of Science and Technology Information Management Master Degree Student. Major in Backend/DevOps/System Design Management.Currently prepare for master degree and looking for job.",
     },
     contact:{
         title:"Contact",

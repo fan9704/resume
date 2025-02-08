@@ -32,26 +32,26 @@
         </div>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxl-typescript skills__icon' ></i>
-            <span class="skills__name">TypeScript</span>
+            <i class='bx bxl-docker skills__icon' ></i>
+            <span class="skills__name">Docker</span>
           </div>
           <div class="skills__bar skills__js">
 
           </div>
           <div>
-            <span class="skills__percentage">65%</span>
+            <span class="skills__percentage">85%</span>
           </div>
         </div>
         <div class="skills__data">
           <div class="skills__names">
-            <i class='bx bxl-firebase skills__icon'></i>
-            <span class="skills__name">Firebase</span>
+            <i class='bx bxl-kubernetes skills__icon'></i>
+            <span class="skills__name">Kubernetes</span>
           </div>
           <div class="skills__bar skills__ux">
 
           </div>
           <div>
-            <span class="skills__percentage">85%</span>
+            <span class="skills__percentage">65%</span>
           </div>
         </div>
       </div>
