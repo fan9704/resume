@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 22
       - name: Install pnpm packages
-        run: pnpm install
+        run: pnpm install --frozen-lockfile --shamefully-hoist
 
       - name: Generate Pages
         run: pnpm build
