@@ -11,7 +11,7 @@
 import Home from "@/components/index/Home.vue";
 import About from "@/components/index/About.vue";
 import Work from "@/components/index/Work.vue";
-// import Contact from "@/components/index/Contact.vue";
+import Contact from "@/components/index/Contact.vue";
 import Skill from "@/components/index/Skill.vue";
 
 export default {
